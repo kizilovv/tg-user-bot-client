@@ -1,0 +1,55 @@
+{
+  "name": "tg-user-bot-client",
+  "version": "0.1.0",
+  "description": "High-level Telegram user-bot client (MTProto via mtcute) with exponential-backoff retries, scheduled posts, folder extraction, thread replies and reactions.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "example:login": "tsx examples/login.ts",
+    "example:post": "tsx examples/scheduled-post.ts",
+    "example:folder": "tsx examples/folder-chats.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "telegram",
+    "mtproto",
+    "user-bot",
+    "userbot",
+    "mtcute",
+    "scheduled-posts",
+    "telegram-api",
+    "typescript"
+  ],
+  "author": "Artem Kiziloff <artem.kiziloff@gmail.com> (https://github.com/kizilovv)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kizilovv/tg-user-bot-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kizilovv/tg-user-bot-client/issues"
+  },
+  "homepage": "https://github.com/kizilovv/tg-user-bot-client#readme",
+  "dependencies": {
+    "@mtcute/node": "^0.26.0",
+    "@mtcute/html-parser": "^0.26.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3"
+  }
+}
